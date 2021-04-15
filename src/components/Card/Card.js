@@ -1,4 +1,9 @@
-const Card = ({ imgUrl, content}) => {
+import { useDeck } from '../../context/AppContext';
+
+const Card = ({ imgUrl, content }) => {
+
+  const { cards, setCards } = useDeck();
+
   return (
     <div className="card">
       <div className="card-image">
